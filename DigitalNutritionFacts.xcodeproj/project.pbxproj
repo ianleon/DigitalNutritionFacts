@@ -11,6 +11,7 @@
 		A62F6E8725A2B6F0000B2099 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62F6E8625A2B6F0000B2099 /* ContentView.swift */; };
 		A62F6E8925A2B6F0000B2099 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A62F6E8825A2B6F0000B2099 /* Assets.xcassets */; };
 		A62F6E8C25A2B6F0000B2099 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A62F6E8B25A2B6F0000B2099 /* Preview Assets.xcassets */; };
+		A62F6E9525A2B73B000B2099 /* NutritionFacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62F6E9425A2B73B000B2099 /* NutritionFacts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		A62F6E8825A2B6F0000B2099 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A62F6E8B25A2B6F0000B2099 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A62F6E8D25A2B6F0000B2099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A62F6E9425A2B73B000B2099 /* NutritionFacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionFacts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				A62F6E8425A2B6F0000B2099 /* DigitalNutritionFactsApp.swift */,
+				A62F6E9425A2B73B000B2099 /* NutritionFacts.swift */,
 				A62F6E8625A2B6F0000B2099 /* ContentView.swift */,
 				A62F6E8825A2B6F0000B2099 /* Assets.xcassets */,
 				A62F6E8D25A2B6F0000B2099 /* Info.plist */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A62F6E8725A2B6F0000B2099 /* ContentView.swift in Sources */,
+				A62F6E9525A2B73B000B2099 /* NutritionFacts.swift in Sources */,
 				A62F6E8525A2B6F0000B2099 /* DigitalNutritionFactsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
