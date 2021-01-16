@@ -7,144 +7,53 @@
 
 import Foundation
 
-extension Double {
-
-    func converted<T:Dimension>(fromUnit: T, to toUnit: T) -> Double {
-        return Measurement(value: self, unit: fromUnit)
-            .converted(to: toUnit).value
-    }
-
-    func toGrams(from fromUnit: UnitMass) -> Double {
-        return self.converted(fromUnit: fromUnit, to: .grams)
-    }
+struct ServingSize {
     
-    func toMilliliters(from fromUnit: UnitVolume) -> Double {
-        return self.converted(fromUnit: fromUnit, to: .milliliters)
-    }
-    
-    func toMeasurement<T:Unit>(withUnit: T) -> Measurement<T> {
-        return Measurement(value: self, unit: withUnit)
-    }
+    let volume: Volume
+    let mass: Mass
 }
 
-struct Mass {
+struct Fat {
     
-    let grams: Double
+    let saturatedFat: Mass
+    let transFat: Mass
     
-    init(g: Double) {
-        grams = g
-    }
-    
-    // MARK: - Convenience initializers
-    
-    init(mg milligrams: Double) {
-        self.init(g: milligrams.toGrams(from: .milligrams))
-    }
-    init(mcg micrograms: Double) {
-        self.init(g: micrograms.toGrams(from: .micrograms))
-    }
-    
-    // MARK: - Custom operators
-    
-    static func +(lhs: Mass, rhs: Mass) -> Mass {
-        Mass(g: lhs.grams + rhs.grams)
-    }
-    
-    // MARK: - Formatters
-    
-    static let formatter = MassFormatter()
-    
-    func formatted() -> String {
-        
-        return Mass.formatter.string(fromValue: grams, unit: .gram)
+    var totalFat:Mass {
+        saturatedFat + transFat
     }
 }
-
-struct Volume {
+struct Sugars {
     
-    let milliliter: Double
+    let nonAddedSugars:Mass
+    let addedSugars: Mass
     
-    init(mL: Double) {
-        milliliter = mL
+    var totalSugars: Mass {
+        addedSugars + nonAddedSugars
     }
+}
+struct Carbohydrate {
     
-    // MARK: - Convenience initializers
-    
-    init(cups: Double) {
-        self.init(mL: cups.converted(fromUnit: UnitVolume.cups, to: .milliliters))
-    }
-    
-    // MARK: - Formatters
-    
-    static var formatter:MeasurementFormatter = {
-        let mf = MeasurementFormatter()
-        mf.unitOptions = .naturalScale
-        mf.numberFormatter.maximumFractionDigits = 2
-        return mf
-    }()
-    
-    func formatted() -> String {
-        
-        return Volume.formatter.string(from: milliliter.toMeasurement(withUnit: UnitVolume.milliliters))
-    }
-    
+    let dietaryFiber: Mass
+    let sugars: Sugars
 }
 
+struct Macronutrients {
+    
+    let vitaminD: Mass
+    let calcium: Mass
+    let iron: Mass
+    let potassium: Mass
+}
 struct NutritionFacts {
     
-    let servingsPerContainer: Int
-    
-    struct ServingSize {
-        let volume: Volume
-        let mass: Mass
-    }
-    
+    let servingsPerContainer: Ct
     let servingSize: ServingSize
-    
-    let calories: Int
-    
-    struct Fat {
-        let saturatedFat: Mass
-        let transFat: Mass
-        var totalFat:Mass {
-            saturatedFat + transFat
-        }
-    }
-    
+    let calories: Cal
     let fat: Fat
-    
     let cholesterol: Mass
     let sodium: Mass
-    
-    
-    struct Carbohydrate {
-        
-        let dietaryFiber: Mass
-        
-        struct Sugars {
-            
-            let nonAddedSugars:Mass
-            let addedSugars: Mass
-            
-            var totalSugars: Mass {
-                addedSugars + nonAddedSugars
-            }
-        }
-        
-        let sugars: Sugars
-    }
-    
     let carbohydrate: Carbohydrate
-    
     let protein: Mass
-    
-    struct Macronutrients {
-        let vitaminD: Mass
-        let calcium: Mass
-        let iron: Mass
-        let potassium: Mass
-    }
-    
     let macronutrients: Macronutrients
 }
 
