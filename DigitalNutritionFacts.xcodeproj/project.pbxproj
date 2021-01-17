@@ -13,6 +13,7 @@
 		A623A61825B3AF2C00411766 /* Int+Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623A61725B3AF2C00411766 /* Int+Measurement.swift */; };
 		A623A62125B3AFA600411766 /* Ct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623A62025B3AFA600411766 /* Ct.swift */; };
 		A623A62425B3AFC700411766 /* Cal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623A62325B3AFC700411766 /* Cal.swift */; };
+		A623A62825B3B57500411766 /* MeasurementFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623A62725B3B57500411766 /* MeasurementFormatter.swift */; };
 		A62F6E8525A2B6F0000B2099 /* DigitalNutritionFactsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62F6E8425A2B6F0000B2099 /* DigitalNutritionFactsApp.swift */; };
 		A62F6E8725A2B6F0000B2099 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62F6E8625A2B6F0000B2099 /* ContentView.swift */; };
 		A62F6E8925A2B6F0000B2099 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A62F6E8825A2B6F0000B2099 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		A623A61725B3AF2C00411766 /* Int+Measurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Measurement.swift"; sourceTree = "<group>"; };
 		A623A62025B3AFA600411766 /* Ct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ct.swift; sourceTree = "<group>"; };
 		A623A62325B3AFC700411766 /* Cal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cal.swift; sourceTree = "<group>"; };
+		A623A62725B3B57500411766 /* MeasurementFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementFormatter.swift; sourceTree = "<group>"; };
 		A62F6E8125A2B6F0000B2099 /* DigitalNutritionFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalNutritionFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A62F6E8425A2B6F0000B2099 /* DigitalNutritionFactsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalNutritionFactsApp.swift; sourceTree = "<group>"; };
 		A62F6E8625A2B6F0000B2099 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				A623A60925B3AE8100411766 /* Mass.swift */,
+				A623A62725B3B57500411766 /* MeasurementFormatter.swift */,
 				A623A60C25B3AE9200411766 /* Volume.swift */,
 				A623A62025B3AFA600411766 /* Ct.swift */,
 				A623A62325B3AFC700411766 /* Cal.swift */,
@@ -174,6 +177,7 @@
 				A623A60D25B3AE9200411766 /* Volume.swift in Sources */,
 				A623A62425B3AFC700411766 /* Cal.swift in Sources */,
 				A62F6E8525A2B6F0000B2099 /* DigitalNutritionFactsApp.swift in Sources */,
+				A623A62825B3B57500411766 /* MeasurementFormatter.swift in Sources */,
 				A623A61425B3AEEA00411766 /* Double+Measurement.swift in Sources */,
 				A623A61825B3AF2C00411766 /* Int+Measurement.swift in Sources */,
 			);

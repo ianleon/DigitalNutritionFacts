@@ -39,14 +39,8 @@ struct ContentView: View {
             )
         )
         
-//        print(200.g)
-//        let mf = MeasurementFormatter()
-//        mf.unitOptions = .providedUnit
-//        mf.unitStyle = .short
-//        print(mf.string(from: 200.g))
-//
         return VStack {
-            
+            Text(400.g.short)
         }
         
     }

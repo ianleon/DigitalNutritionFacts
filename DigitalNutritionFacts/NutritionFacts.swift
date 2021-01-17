@@ -56,6 +56,3 @@ struct NutritionFacts {
     let protein: Mass
     let macronutrients: Macronutrients
 }
-
-
-
