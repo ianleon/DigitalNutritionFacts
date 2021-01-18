@@ -39,6 +39,12 @@ struct ContentView: View {
             )
         )
         
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        
+        let data = try! encoder.encode(n)
+        print(String(data: data, encoding: .utf8)!)
+        
         return VStack {
             Text(400.g.short)
         }

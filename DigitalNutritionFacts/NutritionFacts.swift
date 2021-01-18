@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct ServingSize {
+struct ServingSize: Codable {
     
     let volume: Volume
     let mass: Mass
 }
 
-struct Fat {
+struct Fat: Codable {
     
     let saturatedFat: Mass
     let transFat: Mass
@@ -22,7 +22,7 @@ struct Fat {
         saturatedFat + transFat
     }
 }
-struct Sugars {
+struct Sugars: Codable {
     
     let nonAddedSugars:Mass
     let addedSugars: Mass
@@ -31,20 +31,20 @@ struct Sugars {
         addedSugars + nonAddedSugars
     }
 }
-struct Carbohydrate {
+struct Carbohydrate: Codable {
     
     let dietaryFiber: Mass
     let sugars: Sugars
 }
 
-struct Macronutrients {
+struct Macronutrients: Codable {
     
     let vitaminD: Mass
     let calcium: Mass
     let iron: Mass
     let potassium: Mass
 }
-struct NutritionFacts {
+struct NutritionFacts: Codable {
     
     let servingsPerContainer: Ct
     let servingSize: ServingSize
