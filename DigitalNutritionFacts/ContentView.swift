@@ -6,9 +6,23 @@
 //
 
 import SwiftUI
+import HealthKit
 
 struct ContentView: View {
     var body: some View {
+        
+        if HKHealthStore.isHealthDataAvailable() {
+            HKHealthStore().requestAuthorization(toShare: nil, read: [HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!]) { passed, err in
+                if (passed) {
+                    let healthKitStore = HKHealthStore()
+                        
+                    healthKitStore.execute(HKSampleQuery(sampleType: .quantityType(forIdentifier: .activeEnergyBurned)!, predicate: nil, limit: 10, sortDescriptors: nil, resultsHandler: { q, sample, err in
+                        print(sample)
+                    }))
+                }
+            }
+        }
+        
         
         let n = NutritionFacts(
             servingsPerContainer: 1,
